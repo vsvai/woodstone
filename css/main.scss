@@ -6,8 +6,6 @@ $color3: rgb(255, 255, 255);
 $font-med: 0.9rem;
 $font-sm:0.8rem;
 @import "./header";
-@import "./mixins";
-@import "./mobilenav";
 @import "./feature";
 @import "./variables/main.scss";
 @import "./mixins/main.scss";
@@ -66,7 +64,7 @@ a:hover {
 button,
 .button {
     padding: 0.7rem 1.65rem;
-    background: rgb(255, 61, 120);
+    background: rgb(202, 202, 202);
     border-radius: 4px;
     cursor: pointer;
     border: 14;

@@ -1,14 +1,10 @@
 .header {
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
     color: black;
     nav {
         color: black;
         top: 0;
         width: 100%;
-    }
-    img {
-        width: 40px;
-        height: 100%;
     }
     &__logo {
         //logo
@@ -52,7 +48,7 @@
                 bottom: -10px;
             }
             &:hover {
-                color: red;
+                color: rgb(0, 0, 0);
                 &::before {
                     background: black;
                 }

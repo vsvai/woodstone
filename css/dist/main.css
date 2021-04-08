@@ -1,5 +1,5 @@
 .header {
-  background-color: grey;
+  background-color: white;
   color: black;
 }
 
@@ -7,11 +7,6 @@
   color: black;
   top: 0;
   width: 100%;
-}
-
-.header img {
-  width: 40px;
-  height: 100%;
 }
 
 .header__logo {
@@ -61,7 +56,7 @@
 }
 
 .header__links a:hover {
-  color: red;
+  color: black;
 }
 
 .header__links a:hover::before {
@@ -202,10 +197,6 @@
   .scrolling-wrapper::-webkit-scrollbar {
     display: none;
   }
-}
-
-.scrolling-wrapper::-webkit-scrollbar:hover {
-  background: linear-gradient(left, #555555, #4e4e4e);
 }
 
 .scrolling-wrapper::-webkit-scrollbar-thumb {
@@ -1234,7 +1225,7 @@ a:hover {
 button,
 .button {
   padding: 0.7rem 1.65rem;
-  background: #ff3d78;
+  background: #cacaca;
   border-radius: 4px;
   cursor: pointer;
   border: 14;

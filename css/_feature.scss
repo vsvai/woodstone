@@ -1,3 +1,23 @@
+@media (min-width: 64em) {
+    ///styles go here
+}
+
+//640px, 1024px, 1400px
+$breakpoints-up:("medium":"45em", "large":"64em", "xlarge":"94em");
+//639px, 1024px, 1399px
+$breakpoints-down:("small":"39.9375em", "medium":"44.628em", "large":"64em");
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+
 .feature {
     &__grid {
         text-align: center;
@@ -98,9 +118,6 @@
         border-radius: 50px;
         @include breakpoint-down(medium) {
             display: none;
-        }
-        &:hover {
-            background: linear-gradient(left, #555555, #4e4e4e);
         }
     }
     &::-webkit-scrollbar-thumb {
