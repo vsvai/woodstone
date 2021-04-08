@@ -1,40 +1,67 @@
-feature {
+.feature {
     &__grid {
         text-align: center;
         justify-content: center;
+        display: flex;
+        flex: 2 2 100%;
         @include breakpoint-up(large) {
             display: flex;
             flex-wrap: wrap;
+            flex: 2 2 100%;
         }
         @include breakpoint-up(medium) {
             display: flex;
             flex-wrap: wrap;
+            flex: 2 2 100%;
         }
         @include breakpoint-down(small) {
             display: flex;
             flex: 2 2 100%;
             flex-flow: row wrap;
         }
-        img {
-            width: 40%;
-            height: 40%;
-        }
     }
     &__item {
+        img {
+            max-width: 40px;
+            width: 50%;
+            height: 100%;
+        }
+        border-radius: 5px;
+        text-align: center;
         padding: 0px;
         overflow: hidden;
-        background-color: #E6E6E6;
-        margin-bottom: 0px;
-        margin-right: 0px;
+        margin-bottom: 20px;
+        margin-right: 20px;
         height: 100%;
-        justify-content: center;
         transition: all 150ms ease-in-out;
         width: 100%;
         @include breakpoint-down(small) {
             width: 300px;
         }
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.07);
+        }
+        h1 {
+            justify-content: center;
+            color: #ffffff;
+        }
+        p {
+            text-align: left;
+        }
+    }
+    &__title {
+        padding: 0px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        height: 100%;
+        transition: all 150ms ease-in-out;
+        width: 100%;
+        @include breakpoint-down(small) {
+            width: 300px;
+        }
+        &:hover {
+            transform: scale(1.07);
         }
         h1 {
             justify-content: right;
@@ -43,6 +70,7 @@ feature {
         p {
             text-align: left;
         }
+        //
     }
     &__icon {
         justify-content: center;
