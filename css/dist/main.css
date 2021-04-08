@@ -84,7 +84,6 @@
   .feature__grid {
     display: flex;
     flex-wrap: wrap;
-    flex: 2 2 100%;
   }
 }
 
@@ -92,7 +91,6 @@
   .feature__grid {
     display: flex;
     flex-wrap: wrap;
-    flex: 2 2 100%;
   }
 }
 
@@ -1181,11 +1179,14 @@
   }
 }
 
-h1 {
+h1,
+p {
   font-family: 'Shadows Into Light', cursive;
   color: white;
   display: flex;
   margin: 0px;
+  text-align: center;
+  justify-content: center;
 }
 
 i {

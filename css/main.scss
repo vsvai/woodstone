@@ -9,15 +9,18 @@ $font-sm:0.8rem;
 @import "./mixins";
 @import "./mobilenav";
 @import "./feature";
-@import "variables/main.scss";
-@import "mixins/main.scss";
+@import "./variables/main.scss";
+@import "./mixins/main.scss";
 @import "grid";
 @import "visibility"; // Visibility last for precedence
-h1 {
+h1,
+p {
     font-family: 'Shadows Into Light', cursive;
     color: white;
     display: flex;
     margin: 0px;
+    text-align: center;
+    justify-content: center;
 }
 
 i {

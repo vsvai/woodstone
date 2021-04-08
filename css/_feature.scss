@@ -7,12 +7,10 @@
         @include breakpoint-up(large) {
             display: flex;
             flex-wrap: wrap;
-            flex: 2 2 100%;
         }
         @include breakpoint-up(medium) {
             display: flex;
             flex-wrap: wrap;
-            flex: 2 2 100%;
         }
         @include breakpoint-down(small) {
             display: flex;
