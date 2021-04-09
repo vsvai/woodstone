@@ -9,8 +9,8 @@ $font-sm:0.8rem;
 @import "./feature";
 @import "./variables/main.scss";
 @import "./mixins/main.scss";
-@import "grid";
-@import "visibility"; // Visibility last for precedence
+@import "./grid";
+@import "./visibility"; // Visibility last for precedence
 h1,
 p {
     font-family: 'Shadows Into Light', cursive;
