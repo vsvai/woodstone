@@ -1,0 +1,26 @@
+{
+    "name": "woodstone",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/akroise/woodstone.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/akroise/woodstone/issues"
+    },
+    "homepage": "https://github.com/akroise/woodstone#readme",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.5",
+        "sass": "^1.32.8"
+    }
+}

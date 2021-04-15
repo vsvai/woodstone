@@ -1,27 +1,23 @@
 .header {
-    background-color: rgb(255, 255, 255);
     color: black;
     margin: 0;
     padding: 0;
-    max-width: 1280px;
-    margin: auto;
     padding: 0px;
     nav {
         color: black;
         top: 0;
         width: 100%;
+        max-width: 1280px;
+        margin: auto;
     }
     &__logo {
         //logo
-        top: 0px;
-        left: 0px;
-        padding-bottom: 5px;
         margin-left: 0.54em;
         margin-top: 0.24em;
     }
     &__menu {
         //mobile MENU
-        >span {
+        span {
             display: block;
             width: 26px;
             height: 2px;
@@ -29,17 +25,13 @@
         }
     }
     &__links {
-        padding-top: 3px;
-        padding-right: 10px;
-        button {
-            position: relative;
-            font-size: $font-med;
-            color: $color2;
-        }
+        padding-top: 1.42em;
+        padding-right: 0em;
+        color: $color2;
         a {
             position: relative;
-            font-size: $font-med;
-            color: $color1;
+            font-size: $font-med +0.2rem;
+            color: $color2;
             &:not(:last-child) {
                 margin-right: 30px;
             }
@@ -51,11 +43,12 @@
                 left: 0;
                 right: 0;
                 bottom: -10px;
+                color: $color2;
             }
             &:hover {
                 color: rgb(0, 0, 0);
                 &::before {
-                    background: black;
+                    background: $color2;
                 }
             }
         }
@@ -64,4 +57,21 @@
         font-size: $font-med;
         color: $color2;
     }
+}
+
+.circleBehind a:before,
+.circleBehind a:after {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
 }

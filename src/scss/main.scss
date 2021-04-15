@@ -1,20 +1,25 @@
 //colors
 $color1: whitesmoke;
-$color2: rgb(0, 0, 0);
-$color3: rgb(255, 255, 255);
+$color2: hsl(0, 0%, 2%);
+$color3: hsl(0, 16%, 72%);
 //fonts
 $font-med: 0.9rem;
 $font-sm:0.8rem;
 @import "./header";
 @import "./feature";
+@import "./section";
 @import "./variables/main.scss";
 @import "./mixins/main.scss";
 @import "./grid";
 @import "./visibility"; // Visibility last for precedence
-h1,
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body {
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
 p {
-    font-family: 'Shadows Into Light', cursive;
-    color: white;
+    color: $color2;
     display: flex;
     margin: 0px;
     text-align: center;
@@ -27,26 +32,35 @@ i {
     height: 100%;
 }
 
-body {
-    font-size: $font-med;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shadows Into Light', cursive;
-    position: relative;
-}
-
-main {
-    background-color: rgb(255, 255, 255);
-}
-
 span {
     background: $color1 !important;
     color: $color2;
 }
 
-a,
-a:visited,
-a:hover {
+a {
+    position: relative;
     text-decoration: none;
+    font-size: $font-med +0.2rem;
+    color: $color2;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0.15em;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        color: $color2;
+    }
+    &:hover {
+        color: rgb(0, 0, 0);
+        &::before {
+            background: $color2;
+        }
+    }
 }
 
 //flexbox
@@ -66,7 +80,7 @@ a:hover {
 button,
 .button {
     padding: 0.7rem 1.65rem;
-    background: rgb(202, 202, 202);
+    background: $color3;
     border-radius: 4px;
     cursor: pointer;
     border: 14;
@@ -94,13 +108,16 @@ button,
     font-size: 50px;
     padding: 50px;
     justify-content: center;
+    width: 100% auto;
     @include breakpoint-down(medium) {
-        margin-top: -50px;
         padding: -50px;
+        width: 80%;
+        margin: auto;
     }
     @include breakpoint-down(small) {
-        margin-top: -50px;
         padding: -50px;
+        width: 75%;
+        margin: auto;
     }
     @include breakpoint-up(medium) {
         text-align: top;
@@ -112,17 +129,4 @@ code {
     font-family: 'Square721 BT';
     font-size: 13px;
     color: black;
-}
-
-.white {
-    background-color: white;
-    height: 400px;
-    position: fixed absolute;
-    overflow: auto;
-}
-
-.black {
-    max-width: 1280px;
-    margin: auto;
-    padding: 0px;
 }
