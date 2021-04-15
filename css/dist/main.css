@@ -1,6 +1,11 @@
 .header {
   background-color: white;
   color: black;
+  margin: 0;
+  padding: 0;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0px;
 }
 
 .header nav {
@@ -1188,11 +1193,13 @@ i {
 
 body {
   font-size: 0.9rem;
-  background-color: black;
   font-family: 'Roboto', sans-serif;
   font-family: 'Shadows Into Light', cursive;
   position: relative;
-  margin: 0em;
+}
+
+main {
+  background-color: white;
 }
 
 span {
@@ -1278,5 +1285,18 @@ code {
   font-family: 'Square721 BT';
   font-size: 13px;
   color: black;
+}
+
+.white {
+  background-color: white;
+  height: 400px;
+  position: fixed absolute;
+  overflow: auto;
+}
+
+.black {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0px;
 }
 /*# sourceMappingURL=main.css.map */

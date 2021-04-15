@@ -29,11 +29,13 @@ i {
 
 body {
     font-size: $font-med;
-    background-color: black;
     font-family: 'Roboto', sans-serif;
     font-family: 'Shadows Into Light', cursive;
     position: relative;
-    margin: 0em;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
 }
 
 span {
@@ -110,4 +112,17 @@ code {
     font-family: 'Square721 BT';
     font-size: 13px;
     color: black;
+}
+
+.white {
+    background-color: white;
+    height: 400px;
+    position: fixed absolute;
+    overflow: auto;
+}
+
+.black {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px;
 }
