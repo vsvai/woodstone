@@ -1,6 +1,6 @@
 .section1 {
     background-color: $color1;
-    min-height: 500px;
+    min-height: 300px;
     //height: auto;
     width: 100%;
     background-size: contain;
@@ -8,19 +8,29 @@
     background-position: center center;
     max-height: 1000px;
     &__data {
-        max-width: 1280px;
+        color: $color1;
+        max-width: 1080px;
+        .dim {
+            max-width: 500px;
+        }
         margin: auto;
     }
 }
 
 .section2 {
-    height: 400px;
-    position: fixed absolute;
+    max-height: 700px;
+    height: 100%;
     background-color: $color2;
     padding: 0px;
-    overflow: auto;
     &__data {
-        max-width: 1280px;
+        color: $color1;
+        height: 100%;
+        max-width: 1080px;
+        .dim {
+            color: white;
+            padding: 2em;
+            font-size: 1.1em;
+        }
         margin: auto;
     }
 }

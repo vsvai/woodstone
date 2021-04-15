@@ -7,7 +7,7 @@
         color: black;
         top: 0;
         width: 100%;
-        max-width: 1280px;
+        max-width: 1080px;
         margin: auto;
     }
     &__logo {
@@ -28,6 +28,7 @@
         padding-top: 1.42em;
         padding-right: 0em;
         color: $color2;
+        margin-right: 2em;
         a {
             position: relative;
             font-size: $font-med +0.2rem;

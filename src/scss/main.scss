@@ -1,6 +1,6 @@
 //colors
 $color1: whitesmoke;
-$color2: hsl(0, 0%, 2%);
+$color2: hsl(0, 1%, 14%);
 $color3: hsl(0, 16%, 72%);
 //fonts
 $font-med: 0.9rem;
@@ -12,6 +12,7 @@ $font-sm:0.8rem;
 @import "./mixins/main.scss";
 @import "./grid";
 @import "./visibility"; // Visibility last for precedence
+//using material-UI
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body {
     margin: auto;
@@ -102,21 +103,21 @@ button,
 //text
 .banner {
     font-family: 'Shadows Into Light', cursive;
-    margin-top: 50px;
+    margin: auto;
     justify-content: center;
     text-align: bottom;
     font-size: 50px;
-    padding: 50px;
+    padding-top: 0.01em;
     justify-content: center;
     width: 100% auto;
     @include breakpoint-down(medium) {
-        padding: -50px;
+        padding: -20px;
         width: 80%;
         margin: auto;
     }
     @include breakpoint-down(small) {
-        padding: -50px;
-        width: 75%;
+        padding-top: 30px;
+        width: 80%;
         margin: auto;
     }
     @include breakpoint-up(medium) {

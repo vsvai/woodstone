@@ -101,32 +101,40 @@ $breakpoints-down:("small":"39.9375em", "medium":"44.628em", "large":"64em");
     overflow-x: scroll;
     margin: 0px;
     padding: 20px;
-    background: white;
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     .card {
         display: inline-block;
         transition: all 150ms ease-in-out;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 50px;
+        padding-bottom: 0px;
         &:hover {
             transform: scale(1.1);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         }
+    }
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+        color: #000000;
     }
     &::-webkit-scrollbar {
         display: block;
         height: 9px;
         border-radius: 50px;
-        @include breakpoint-down(medium) {
+        @include breakpoint-down(small) {
             display: none;
         }
     }
     &::-webkit-scrollbar-thumb {
-        background: #888;
         width: 5px;
-        display: inline-block;
         border-radius: 50px;
-        background: rgb(0, 0, 0);
+        background: $color2;
         border-radius: 50px;
-        ;
+        display: contents;
     }
 }
