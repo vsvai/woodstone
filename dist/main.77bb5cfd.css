@@ -161,11 +161,35 @@
 
 .scrolling-wrapper {
   overflow-x: scroll;
-  margin: 0px;
-  padding: 20px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   overflow-y: hidden;
   white-space: nowrap;
+  display: flex;
+  grid-gap: 16px;
   -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 45em) {
+  .scrolling-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 44.628em) {
+  .scrolling-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 39.9375em) {
+  .scrolling-wrapper {
+    display: block;
+  }
 }
 .scrolling-wrapper .card {
   display: inline-block;
@@ -190,6 +214,11 @@
   height: 9px;
   border-radius: 50px;
 }
+@media (min-width: ) {
+  .scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media (max-width: 39.9375em) {
   .scrolling-wrapper::-webkit-scrollbar {
     display: none;
@@ -200,7 +229,6 @@
   border-radius: 50px;
   background: #242323;
   border-radius: 50px;
-  display: contents;
 }
 
 .section1 {

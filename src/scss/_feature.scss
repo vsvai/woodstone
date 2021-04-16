@@ -99,10 +99,28 @@ $breakpoints-down:("small":"39.9375em", "medium":"44.628em", "large":"64em");
 
 .scrolling-wrapper {
     overflow-x: scroll;
-    margin: 0px;
-    padding: 20px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     overflow-y: hidden;
     white-space: nowrap;
+    display: flex;
+    grid-gap: 16px;
+    @include breakpoint-up(medium) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include breakpoint-down(medium) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint-down(small) {
+        display: block;
+    }
     -webkit-overflow-scrolling: touch;
     .card {
         display: inline-block;
@@ -126,6 +144,9 @@ $breakpoints-down:("small":"39.9375em", "medium":"44.628em", "large":"64em");
         display: block;
         height: 9px;
         border-radius: 50px;
+        @include breakpoint-up(small) {
+            display: none;
+        }
         @include breakpoint-down(small) {
             display: none;
         }
@@ -135,6 +156,5 @@ $breakpoints-down:("small":"39.9375em", "medium":"44.628em", "large":"64em");
         border-radius: 50px;
         background: $color2;
         border-radius: 50px;
-        display: contents;
     }
 }
