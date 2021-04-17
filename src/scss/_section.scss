@@ -11,7 +11,9 @@
         color: $color1;
         max-width: 1080px;
         .dim {
-            max-width: 500px;
+            max-width: 400px;
+            color: black;
+            padding: 1rem;
         }
         margin: auto;
     }
@@ -20,7 +22,7 @@
 .section2 {
     max-height: 700px;
     height: 100%;
-    background-color: $color2;
+    background-color: $color5;
     padding: 0px;
     &__data {
         color: $color1;
@@ -28,7 +30,7 @@
         max-width: 1080px;
         .dim {
             color: white;
-            padding: 2em;
+            padding: 1.6em;
             font-size: 1.1em;
         }
         margin: auto;
