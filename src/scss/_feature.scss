@@ -18,98 +18,24 @@ $breakpoints-down:("small":"40em", "medium":"45em", "large":"64em");
     }
 }
 
-.feature {
-    &__grid {
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        flex: 2 2 100%;
-        @include breakpoint-up(large) {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        @include breakpoint-up(medium) {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        @include breakpoint-down(small) {
-            display: flex;
-            flex: 2 2 100%;
-            flex-flow: row wrap;
-        }
-    }
-    &__item {
-        img {
-            max-width: 40px;
-            width: 50%;
-            height: 100%;
-        }
-        border-radius: 5px;
-        text-align: center;
-        padding: 0px;
-        overflow: hidden;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        height: 100%;
-        transition: all 150ms ease-in-out;
-        width: 100%;
-        @include breakpoint-down(small) {
-            width: 300px;
-        }
-        &:hover {
-            transform: scale(1.07);
-        }
-        h1 {
-            justify-content: center;
-            color: #ffffff;
-        }
-        p {
-            text-align: left;
-        }
-    }
-    &__title {
-        padding: 0px;
-        overflow: hidden;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        height: 100%;
-        transition: all 150ms ease-in-out;
-        width: 100%;
-        @include breakpoint-down(small) {
-            width: 300px;
-        }
-        &:hover {
-            transform: scale(1.07);
-        }
-        h1 {
-            justify-content: right;
-            color: #555555;
-        }
-        p {
-            text-align: left;
-        }
-        //
-    }
-    &__icon {
-        justify-content: center;
-        padding: 0px;
-        //
-    }
+@mixin bgConfig {
+    background-size: cover;
+    background-position: center center;
 }
 
 .scrolling-wrapper {
     overflow-x: scroll;
-    max-width: 980px;
+    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     overflow-y: hidden;
     white-space: nowrap;
-    display: flex;
     grid-gap: 16px;
+    justify-content: center;
     @include breakpoint-up(large) {
         display: grid;
     }
@@ -127,35 +53,19 @@ $breakpoints-down:("small":"40em", "medium":"45em", "large":"64em");
     }
     @include breakpoint-down(small) {
         display: block;
+        padding: 0rem;
+        margin-left: -20px;
+        margin-right: 0;
+        padding-left: 30px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     -webkit-overflow-scrolling: touch;
-    .card {
-        display: inline-block;
-        transition: all 100ms ease-in-out;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-height: 13.5rem;
-        min-height: 13.5rem;
-        max-width: 13.5rem;
-        min-width: 13.5rem;
-        margin: 0;
-        padding: 0;
-        &:hover {
-            transform: scale(1.01);
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-    }
-    .container {
-        padding-left: auto;
-        padding-right: auto;
-        color: #000000;
-    }
     &::-webkit-scrollbar {
         display: block;
         height: 9px;
         border-radius: 50px;
-        @include breakpoint-up(small) {
-            display: none;
-        }
         @include breakpoint-down(small) {
             display: none;
         }
@@ -165,5 +75,83 @@ $breakpoints-down:("small":"40em", "medium":"45em", "large":"64em");
         border-radius: 50px;
         background: $color2;
         border-radius: 50px;
+    }
+    .card {
+        display: inline-block;
+        overflow: hidden;
+        transition: all 100ms ease-in-out;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-height: 18.5rem;
+        min-height: 18.5rem;
+        max-width: 12.5rem;
+        min-width: 12.5rem;
+        margin: 0.2rem;
+        padding: 0;
+        &:hover .card__visual {
+            background: url("../assests/home1.jpeg") no-repeat;
+            @include bgConfig;
+            transform: scale(0.9);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            height: 14rem;
+        }
+        &__visual {
+            background: url("../assests/home2.jpeg") no-repeat;
+            height: 17rem;
+            width: 100%;
+            @include bgConfig;
+            position: relative;
+            transition: all .7s ease;
+        }
+        &__texts {
+            padding-top: -1rem;
+            cursor: default;
+            padding: 0.1rem;
+            width: 100%;
+            .title {
+                margin: -0.1rem;
+                padding-left: 1rem;
+                font-size: 1rem;
+                color: #57606f;
+            }
+            .subtitle {
+                margin: -1.2rem;
+                padding: 0;
+                text-align: right;
+                padding-left: 7.1rem;
+                font-size: 0.71rem;
+                color: #747d8c;
+            }
+            .read {
+                display: grid;
+                margin: 1.8rem;
+                text-align: right;
+                padding: 0.8rem;
+                padding-left: 6rem;
+                font-size: 0.71rem;
+                color: #747d8c;
+            }
+        }
+        a {
+            color: black;
+            font-size: 0.7rem;
+            padding-left: 7rem;
+            margin: 1.2rem;
+            cursor: pointer;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 0em;
+                left: 0;
+                right: 0;
+                bottom: 0px;
+                color: $color2;
+            }
+            &:hover {
+                &::before {
+                    background-color: white;
+                }
+            }
+        }
     }
 }

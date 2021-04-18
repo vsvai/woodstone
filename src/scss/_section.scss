@@ -1,21 +1,25 @@
 .section1 {
     background-color: $color1;
-    min-height: 300px;
     //height: auto;
     width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
     max-height: 1000px;
+    margin: 0;
+    padding: 0;
     &__data {
+        margin: 0;
+        padding: 0;
         color: $color1;
         max-width: 1080px;
+        width: 100%;
+        margin: auto;
+        padding: 0;
         .dim {
+            font-size: large;
             max-width: 400px;
             color: black;
-            padding: 1rem;
+            padding: 0.01rem;
+            margin-top: 0;
         }
-        margin: auto;
     }
 }
 
@@ -27,12 +31,27 @@
     &__data {
         color: $color1;
         height: 100%;
-        max-width: 1080px;
+        max-width: 900px;
         .dim {
             color: white;
             padding: 1.6em;
             font-size: 1.1em;
         }
         margin: auto;
+    }
+    .visiting-card {
+        color: black;
+        width: 50%;
+        position: absolute;
+        &::before {
+            content: "";
+            display: none;
+        }
+        &:hover {
+            display: block;
+            &::before {
+                background-color: white;
+            }
+        }
     }
 }

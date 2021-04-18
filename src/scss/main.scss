@@ -18,16 +18,26 @@ $font-sm:0.8rem;
 @import "./visibility"; // Visibility last for precedence
 //using material-UI
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    position: relative;
+    // outline: 1px solid red;
+}
+
 body {
-    margin: auto;
+    background-color: $color6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: grid;
     font-family: 'Poppins', sans-serif;
 }
 
 p {
-    color: $color2;
+    color: $color1;
     display: flex;
     margin: 0px;
-    text-align: center;
     justify-content: center;
 }
 
