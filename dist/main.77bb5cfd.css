@@ -275,6 +275,73 @@
   background-color: white;
 }
 
+footer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  max-width: 1080px;
+  white-space: nowrap;
+  grid-gap: 16px;
+  justify-content: center;
+}
+@media (max-width: 40em) {
+  footer {
+    display: subgrid;
+    grid-row-gap: 1px;
+    grid-column-gap: 9px;
+  }
+}
+footer a {
+  color: black;
+  cursor: pointer;
+  text-align: right;
+}
+footer a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0em;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  color: #77392c;
+}
+footer a:hover::before {
+  background-color: #f1f3f2;
+}
+footer k {
+  font-family: "Helvetica Neue", sans-serif;
+  padding: 0;
+  color: #e8e9e8;
+  font-size: 0.7rem;
+  text-align: right;
+}
+footer k:hover {
+  color: gainsboro;
+}
+footer p {
+  font-size: 0.9rem;
+  padding: 0.3rem;
+}
+footer code {
+  color: #e8e9e8;
+}
+footer code:hover {
+  color: gainsboro;
+}
+footer .address {
+  padding-left: 10px;
+  padding-right: 20px;
+  text-align: left;
+}
+footer .contact {
+  text-align: center;
+}
+
 .row {
   box-sizing: border-box;
   margin: 0 auto;
